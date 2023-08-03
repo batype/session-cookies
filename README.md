@@ -1,27 +1,31 @@
-# React + TypeScript + Vite
+# session-cookies
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+session-cookies 这个插件是用来汇总浏览器的三个缓存 localStorage、sessionStorage、Cookies。该插件注重使用方便快捷下面是一些API汇总说明。
 
-Currently, two official plugins are available:
+#### API 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+|  名称   |   获取所有    |     获取单个      |     设置单个      |       移除单个       |      清除所有       |
+| :-----: | :-----------: | :---------------: | :---------------: | :------------------: | :-----------------: |
+| cookies | getCookieList |     getCookie     |     setCookie     |     removeCookie     |     clearCookie     |
+| session |       -       | getSessionStorage | setSessionStorage | removeSessionStorage | clearSessionStorage |
+|  local  |       -       |  getLocalStorage  |  setLocalStorage  |  removeLocalStorage  |  clearLocalStorage  |
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+#### 使用案例
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+`npm i session-cookies`
+
+获取所有Cookies
+
+```ts
+import { cookies } from 'session-cookies'
+
+cookies.getCookieList(); // 返回JSON结果数据
+cookies.getCookie('test'); // 返回属性值
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+
+
+
