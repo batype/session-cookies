@@ -16,6 +16,7 @@
   "scripts": {
     "build": "tsc",
     "prepublish": "yarn build",
+    "publish": "npm run release && npm run build && npm publish",
     "release": "np --any-branch --no-yarn --no-tests --no-cleanup  --contents",
     "test": "jest --config=jest.config.json"
   },
