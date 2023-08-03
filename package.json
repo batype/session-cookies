@@ -1,5 +1,5 @@
 {
-  "name": "sesssion-cookies",
+  "name": "session-cookies",
   "private": false,
   "version": "0.0.9",
   "main": "dist/index.js",
