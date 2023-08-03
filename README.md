@@ -26,8 +26,3 @@ import { cookies } from 'session-cookies'
 cookies.getCookieList(); // 返回JSON结果数据
 cookies.getCookie('test'); // 返回属性值
 ```
-
-
-
-
-
