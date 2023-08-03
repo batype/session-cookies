@@ -64,4 +64,10 @@ const clearCookie = () => {
   });
 };
 
-export { getCookieList, getCookie, setCookie, removeCookie, clearCookie };
+export const cookies = {
+  getCookieList,
+  getCookie,
+  setCookie,
+  removeCookie,
+  clearCookie,
+};

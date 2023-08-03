@@ -1,12 +1,10 @@
 {
-  "name": "sesssion-cookie",
+  "name": "sesssion-cookies",
   "private": false,
   "version": "0.0.8",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "author": {
-    "name": "songshao"
-  },
+  "author": "songshao",
   "engines": {
     "node": ">=10"
   },
@@ -54,5 +52,6 @@
   "dependencies": {
     "esbuild": "^0.18.17",
     "tsc": "^2.0.4"
-  }
+  },
+  "repository": "https://gitee.com/songsshao_admin/sesssion-cookie.git"
 }

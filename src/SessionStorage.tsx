@@ -50,7 +50,7 @@ const getSessionStorageKeyFindIndex = (index: number) => {
   return sessionStorage.key(index);
 };
 
-export {
+export const session = {
   getSessionStorage,
   setSessionStorage,
   removeSessionStorage,

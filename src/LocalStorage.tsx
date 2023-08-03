@@ -50,7 +50,7 @@ const getLocalStorageKeyFindIndex = (index: number) => {
   return localStorage.key(index);
 };
 
-export {
+export const local = {
   getLocalStorage,
   setLocalStorage,
   removeLocalStorage,
