@@ -1,6 +1,11 @@
 # session-cookies
 
+    session-cookies is localStorage、sessionStorage、Cookies。
+
+
  <a href="https://badge.fury.io/js/session-cookies"><img src="https://badge.fury.io/js/session-cookies.svg" /></a>
+ [![npm downloads](https://img.shields.io/npm/dm/session-cookies.svg)](https://www.npmjs.com/package/session-cookies)
+
 
 session-cookies This plugin is used to summarize the browser's three caches localStorage, sessionStorage, Cookies.The plugin is designed to be quick and easy to use. Below is a summary of some apis.
 
@@ -67,5 +72,9 @@ local.getLocalStorageKeyFindIndex(0); // test
 local.getLocalStorageKeyFindIndex(1); // username
 ```
 
+### Browsers
+
+```
 
 
+```
