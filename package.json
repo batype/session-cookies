@@ -53,5 +53,5 @@
     "esbuild": "^0.18.17",
     "tsc": "^2.0.4"
   },
-  "repository": "https://gitee.com/songsshao_admin/sesssion-cookie.git"
+  "repository": "https://gitee.com/songsshao_admin/session-cookies.git"
 }

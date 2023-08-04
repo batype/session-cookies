@@ -50,7 +50,16 @@ const getLocalStorageKeyFindIndex = (index: number) => {
   return localStorage.key(index);
 };
 
+/**
+ * 获取所有数据
+ * @returns Storage
+ */
+function getAllLocalStorage(): Storage {
+  return localStorage;
+}
+
 export const local = {
+  getAllLocalStorage,
   getLocalStorage,
   setLocalStorage,
   removeLocalStorage,

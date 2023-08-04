@@ -50,7 +50,16 @@ const getSessionStorageKeyFindIndex = (index: number) => {
   return sessionStorage.key(index);
 };
 
+/**
+ * 获取所有数据
+ * @returns Storage
+ */
+function getAllSessionStorage(): Storage {
+  return sessionStorage;
+}
+
 export const session = {
+  getAllSessionStorage,
   getSessionStorage,
   setSessionStorage,
   removeSessionStorage,
