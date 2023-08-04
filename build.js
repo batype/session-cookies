@@ -3,7 +3,7 @@ const esbuild = require("esbuild");
 esbuild
   .build({
     entryPoints: ["src/index.ts"],
-    outfile: "lib/session-cookies.js",
+    outfile: "lib/sessionCookies.js",
     bundle: true,
     format: "iife",
     globalName: "sessionCookies", // 设置全局名称
