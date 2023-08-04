@@ -8,19 +8,21 @@ session-cookies 这个插件是用来汇总浏览器的三个缓存 localStorage
 
 #### API 
 
-|  名称   |   获取所有    |     获取单个      |     设置单个      |       移除单个       |      清除所有       |
-| :-----: | :-----------: | :---------------: | :---------------: | :------------------: | :-----------------: |
-| cookies | getCookieList |     getCookie     |     setCookie     |     removeCookie     |     clearCookie     |
-| session |       -       | getSessionStorage | setSessionStorage | removeSessionStorage | clearSessionStorage |
-|  local  |       -       |  getLocalStorage  |  setLocalStorage  |  removeLocalStorage  |  clearLocalStorage  |
+|  名称   |       获取所有       |     获取单个      |     设置单个      |       移除单个       |      清除所有       |
+| :-----: | :------------------: | :---------------: | :---------------: | :------------------: | :-----------------: |
+| cookies |    getCookieList     |     getCookie     |     setCookie     |     removeCookie     |     clearCookie     |
+| session | getAllSessionStorage | getSessionStorage | setSessionStorage | removeSessionStorage | clearSessionStorage |
+|  local  |  getAllLocalStorage  |  getLocalStorage  |  setLocalStorage  |  removeLocalStorage  |  clearLocalStorage  |
 
 
 
 #### 使用案例
 
-`npm i session-cookies`
+```shell
+npm i session-cookies
+```
 
-获取所有Cookies
+##### 获取所有Cookies
 
 ```ts
 import { cookies } from 'session-cookies'
@@ -28,3 +30,42 @@ import { cookies } from 'session-cookies'
 cookies.getCookieList(); // 返回JSON结果数据
 cookies.getCookie('test'); // 返回属性值
 ```
+
+##### 设置单个
+
+```ts
+cookies.setCookie('test', '1234567'); // 设置属性为字符串需要JSON.stringify
+```
+
+##### 移除单个
+
+```tsx
+cookies.removeCookie('test');
+```
+
+##### 清除所有
+
+```tsx
+cookies.clearCookie();
+```
+
+#### 附加API
+
+| 根据index下标获取key值        | 参数      | 结果    |
+| ----------------------------- | --------- | ------- |
+| getLocalStorageKeyFindIndex   | index下标 | 返回key |
+| getSessionStorageKeyFindIndex | index下标 | 返回key |
+
+##### 使用
+
+```ts
+import { local } from 'session-cookies';
+
+local.setLocalStorage('test', '123456');
+local.setLocalStorage('usename', 'songshao');
+local.getLocalStorageKeyFindIndex(0); // test
+local.getLocalStorageKeyFindIndex(1); // username
+```
+
+
+
