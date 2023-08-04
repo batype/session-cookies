@@ -10,7 +10,7 @@
         "default": "./lib/index.d.ts"
       },
       "browser": {
-        "default": "./lib/session-cookies.js"
+        "default": "./lib/sessionCookies.js"
       },
       "default": {
         "default": "./lib/index.js"
@@ -24,7 +24,7 @@
   "files": [
     "lib"
   ],
-  "unpkg": "lib/session-cookies.js",
+  "unpkg": "lib/sessionCookies.js",
   "scripts": {
     "build": "tsc && node build.js",
     "prepublish": "yarn build",

@@ -75,11 +75,13 @@ local.getLocalStorageKeyFindIndex(1); // username
 ### Browsers
 
 ```html
-<script src='https://unpkg.com/session-cookies/lib/sessionCookies.js' ></script>
+
+<!-- 只能使用0.1.5 以后版本 -->
+<script src='https://unpkg.com/session-cookies@0.1.5/lib/sessionCookies.js' ></script>
 
 <script>
-    sessionCookies.local.setLocalStorage('test', '123456');
     // 其他接口同上面使用只需要增加 sessionCookies 全局配置。
+    sessionCookies.local.setLocalStorage('test', '123456');
 </script>
 
 ```
